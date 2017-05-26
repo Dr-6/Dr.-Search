@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+</head>
+
+<body>
+	  <div>
+			 City :	<input type="text" id = "cityTextBox">
+			 Insurance :	<input type="text" id = "insuranceTextBox">
+			 Disease :	<input type="text" id = "diseaseTextBox">
+			 
+			 <br>
+			 <br>
+         <input type="button" value="Redirect Me" onclick="querybaseFunction();" />
+				 <br>
+				 <br>
+				 <img id="doctorImage">
+      </div>
+	  <div>
+		  	<input type="text" id="emailResult">
+	  </div>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+    authDomain: "drseach-f1f59.firebaseapp.com",
+    databaseURL: "https://drseach-f1f59.firebaseio.com",
+    projectId: "drseach-f1f59",
+    storageBucket: "drseach-f1f59.appspot.com",
+    messagingSenderId: "179157502879"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://unpkg.com/querybase@0.6.0"></script>
+
+<script type="text/javascript">
+
+			function querybaseFunction() {		
+				
+				var cityInput = document.getElementById("cityTextBox").value;
+				var diseaseInput = document.getElementById("diseaseTextBox").value;
+				var insuranceInput = document.getElementById("insuranceTextBox").value;
+
+				alert("Values input = " + cityInput + "	"+diseaseInput+"	"+insuranceInput);
+
+				var ref = firebase.database().ref();
+			  var usersRef = ref.child('doctors');
+			  var queryRef = querybase.ref(usersRef, ['city','email','name']);
+//ithe add kar html che components
+ 			  const compositeRef =  queryRef.where({ city:cityInput});
+
+      compositeRef.on('child_added', function(snapshot) { 
+				var insurances_js = snapshot.child("insurances").val();
+				var diseases = snapshot.child("specialization").val();
+				//alert(snapshot.child("image").val());
+				//document.getElementById("doctorImage").src = snapshot.child("image").val(); 
+
+				if(diseases.includes(diseaseInput) == true || insurances_js.includes(insuranceInput)==true){
+						alert(snapshot.child("name").val() + " and " + snapshot.child("email").val() + " and " + 
+						snapshot.child("insurances").val() + " and " + snapshot.child("timing").val()+ " and " + 
+						snapshot.child("address").val());
+						document.getElementById("emailResult").innerHTML = snapshot.child("email").val(); 
+						var review = snapshot.child("review").val().split(":");
+
+					}
+				else{
+						alert("not correct.");
+					}
+				
+				});
+			}
+
+				// Automatically handles composite keys
+				
+ /*queryRef.push({ 
+   name: "Sagar",
+   email: "Sagar@sms.com",
+   city: "Heilbronn"
+ });*/
+
+			
+			//console.write("the rs is  = " + rs);
+			//alert(rs.child("").key);
+			/*rs.on('value',function(snapshot) {
+					var name = snapshot.child("name").val();
+					var email = snapshot.child("email").val();
+					var city = snapshot.child("city").val();
+					alert(name +" and " + email + " and " + city);
+			   });
+*/
+	/*			 	rs.once('value')
+					.then(function(snapshot) {
+					var name = snapshot.child("name").val();
+					var email = snapshot.child("email").val();
+					var city = snapshot.child("city").val();
+					alert(name +" and " + email + " and " + city);
+			   });*/
+
+
+
+				
+</script>
+
+<script type="text/javascript">
+            
+			
+			function Redirect() {			   
+			  var rootRef = firebase.database().ref().child("users");
+			   rootRef
+			   .orderByChild("city")
+			   .equalTo("Berlin")
+			   .on("child_added", snap => {
+					var name = snap.child("name").val();
+					var email = snap.child("email").val();
+					var city = snap.child("city").val();
+					alert(name +" and " + email + " and " + city);
+			   });
+			   
+		 /*var rootRef = firebase.database().ref("users")
+    .startAt("Ajinkya")
+    .endAt("Ajinkya")
+    .once('value', function (snap) {
+        var name = snap.child("name").val();
+					var email = snap.child("email").val();
+					alert(name +" and " + email);
+    });*/
+            }
+
+</script>
+
+</body>
+
+</html>
