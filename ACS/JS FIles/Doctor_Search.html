@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="myAppCategory">
+  <head>
+  
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/css/bootstrap-select.css" />
+<script   src="https://code.jquery.com/jquery-2.2.4.js"  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/js/bootstrap-select.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>
+<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/dm.js"></script>
+<link rel="stylesheet" href="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/Untitled.css" />
+</head>
+<body >
+<!--<div class="effect">
+<ul>
+      <li><a href="#Home"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a></li>
+      <li><a class="active" href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Dr. Search</a></li>
+      <li><a href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a></li>
+      <li><a href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a></li>
+    </ul>
+    </div> -->
+
+<div >
+<div class="col-sm-4">
+<div class="fg-select-margin form-group fg-float">
+  <div class="Category-controller" ng-controller="CategoryController">
+<p class="f-500 c-black m-b-15">Doctor Category</p>
+
+      <select class="selectpicker" ng-model="selectedGender" data-live-search="true" ng-options="gender.value as gender.label for gender in genders" select-picker-category >
+	  <option value="">Select Doctor Category</option>
+    </select>
+ 
+</div>
+</div>
+</div>
+</div>
+
+<!-- *************************************************************************************************************** -->
+<div class="col-sm-4">
+<!--<div class="fg-select-margin form-group fg-float">-->
+  <div class="City-controller" ng-controller="CityController">
+<p class="f-500 c-black m-b-15">City</p>
+
+      <select class="selectpicker" ng-model="selectedGender" data-live-search="true" ng-options="gender.value as gender.label for gender in genders" select-picker-city >
+	  <option value="">Select your city</option>
+    </select>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- *************************************************************************************************************** -->
+<div class="col-sm-4">
+<!--<div class="fg-select-margin form-group fg-float">-->
+  <div class="Insurance-controller" ng-controller="InsuranceController">
+<p class="f-500 c-black m-b-15">Insurance Company</p>
+
+      <select class="selectpicker" ng-model="selectedGender" data-live-search="true" ng-options="gender.value as gender.label for gender in genders" select-picker-insurance >
+	  <option value="">Select insurance company</option>
+    </select>
+ </div>
+</div>
+</div>
+</div>
+
+
+
+
+  </body>
+  </html>
