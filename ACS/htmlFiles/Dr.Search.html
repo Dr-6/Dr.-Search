@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html ng-app="DrsearchApp">
+  
+  
+    <head>
+<!-- All CSS file links -->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/css/bootstrap-select.css" />
+
+<!-- All js file links <--> 
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/js/bootstrap-select.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>-->
+<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/angular.js"></script>
+<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/selectpicker.js"></script>
+<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/angularfire.min.js"></script>
+
+
+
+<!-- Database Connectivity firebase link -->
+
+    </head>
+
+
+    <body>
+        <div class="Drsearch-controller" ng-controller = "DrsearchController">
+
+    <form>
+            <!-- Select box Dr.Category -->
+
+            <div class="col-sm-4">
+            <div class="fg-select-margin form-group fg-float">
+            
+            <p class="f-500 c-black m-b-15">Doctor Category</p>
+            <select class="selectpicker" name="DrCategory" ng-model="selectedCategory" data-live-search="true">
+	            
+                <option value="">Select Doctor Category</option>
+                <option value="Throat">Throat</option>
+                <option value="Heart">Heart</option>
+                <option value="Bones">Bones</option>
+    
+            </select>
+            </div>
+            </div>
+
+            <!-- Select box for User.City -->
+
+            <div class="col-sm-4">
+            <div class="fg-select-margin form-group fg-float">
+            
+            <p class="f-500 c-black m-b-15">City</p>
+            <select class="selectpicker" name="City" ng-model="selectedCity" data-live-search="true">
+	  
+                <option value="">Select your city</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Heidelberg">Heidelberg</option>
+                <option value="Munich">Munich</option>
+                <option value="Mannheim">Mannheim</option>
+                <option value="Bad Durkheim">Bad Durkheim</option>
+                <option value="Heilbronn">Heilbronn</option>
+
+            </select>
+            </div>
+            </div>
+
+            <!-- select box for insurance company -->
+
+            <div class="col-sm-4">
+            <div class="fg-select-margin form-group fg-float">
+
+            <p class="f-500 c-black m-b-15">Insurance Company</p>
+            <select class="selectpicker" name="Insurance" ng-model="selectedInsurance" data-live-search="true">
+
+	            <option value="">Select insurance company</option>
+                <option value="AOK">AOK</option>
+                <option value="TK">TK</option>
+                <option value="Mawista">Mawista</option>
+    
+            </select>
+            </div>
+            </div>
+
+            
+            <!-- databse connectivity code-->
+            <script>
+  
+                    var config = {
+
+                    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+                    authDomain: "drseach-f1f59.firebaseapp.com",
+                    databaseURL: "https://drseach-f1f59.firebaseio.com",
+                    projectId: "drseach-f1f59",
+                    storageBucket: "drseach-f1f59.appspot.com",
+                    messagingSenderId: "179157502879"
+                                
+                            };
+
+                    firebase.initializeApp(config);
+  
+            </script>
+
+            <!-- external links database-->
+
+            <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+            <script src="https://unpkg.com/querybase@0.6.0"></script>
+
+
+            <!-- Code for creating submit button-->
+
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="onSubmit()"> Search </button>
+            </div>
+    </form>
+    
+    </div>
+    </body>
+</html>
