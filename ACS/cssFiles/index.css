@@ -1,0 +1,453 @@
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+/*-------------HEADING TABS--------------*/
+.top{
+    background-color:skyblue;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+a{
+color: pink;
+text-decoration: none;
+}
+
+h1 a{
+    color: black;
+}
+
+h1 a:hover{
+    text-decoration: none;
+}
+
+/*
+ul#tabList{
+    display: table;
+    list-style: none;
+    margin-left: 350px;
+    color: white;
+}
+
+ul#tabList a{
+    color: white;
+    text-decoration: none;
+}
+ul#tabList a:hover{
+    color: #008ca5;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+ }
+ul#tabList li{
+    display: inline;
+}
+
+#home{
+    background-color:#008ca5;
+    height: 30px;
+}
+#drSearch{
+    margin-left: 30px;
+}
+
+#medicalStore{
+    display: inline;
+    margin-left: 30px;
+}
+
+#healthArticle{
+    display: inline;
+    margin-left: 30px;
+}
+
+#tab_aboutUs{
+    display: inline;
+    margin-left: 30px;
+}
+
+*/
+/*
+#tab_home{
+    font-size: 20px;
+    height: 10px;  
+}
+#tab_drSearch{
+    font-size: 20px;
+    margin-top: -20px;
+    margin-left: 100px;
+}
+
+#tab_medical{
+    font-size: 20px;
+    margin-top: -37px;
+    margin-left: 240px;
+}
+
+#tab_articles{
+    font-size: 20px;
+    margin-top: -38px;
+    margin-left: 410px;
+}
+
+#tab_about{
+    font-size: 20px;
+    margin-top: -37px;
+    margin-left: 580px;
+}
+*/
+
+ul#head {
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 100%;
+
+}
+
+li a {
+    display: block;
+    position: static;
+    color: orange;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+        margin-left: 150px;
+        font-family: sans-serif;
+        font-size: 16px;
+        -webkit-transform: all 1s ease;/*safari and chrome*/
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+}
+
+li {
+    float: left;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+    -webkit-transform:scale(1.25);/*safari and chrome*/
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.active {
+background-color: #267714;
+}
+
+
+/*----------LOGO & NAME---------*/
+
+#logo{
+    height: 150px;
+    width: 150px;
+    margin-left: 60px;
+    margin-top: 50px;
+    display: inline;
+}
+
+h1{
+
+    display: inline;
+    white-space: nowrap;
+    margin-left: 350px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+/*---------Buttons Images (DOCTOR, MEDICAL, ARTICLES)------------*/
+
+.buttons{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+#doctor{
+    height: 150px;
+    width: 150px;
+}
+
+#buttons:hover .image {
+  opacity: 0.3;
+  
+}
+
+#buttons:hover .middle {
+  opacity: 1;
+}
+
+#doctor:hover{
+    border: 1px solid skyblue;
+    border-radius: 10px;
+}
+
+/*
+.dr_text {
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+*/
+
+ul#buttonsLabel {
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+ul#buttonsLabel a{
+    text-decoration: none;
+    color: skyblue;
+}
+
+ul#buttonsLabel a:hover{
+    background-color: skyblue;
+    border-radius: 5px;
+    color: white;
+}
+
+ul#buttonsLabel li{
+    display: inline;
+}
+
+.buttonsText{
+    margin-top: 20px;
+    height: 30px;
+}
+
+#dr_text{
+    font-size: 20px;
+    margin-left: -10px;
+}
+
+#medical{
+    height: 150px;
+    width: 150px;
+    margin-left: 320px;
+    margin-top: -160px;
+
+}
+#medical:hover{
+    border: 1px solid skyblue;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#medical_text{
+    font-size: 20px;
+    margin-left: 200px;
+}
+
+
+#article{
+    height: 150px;
+    width: 150px;
+    margin-left: 650px;
+    margin-top: -130px;
+}
+
+#article:hover{
+    border: 1px solid skyblue;
+    border-radius: 10px;
+}
+
+#article_text{
+    font-size: 20px;
+    margin-left: 170px;
+}
+
+
+/*Footer Home Page*/
+
+.footer{
+    display: block;
+    height: 350px;;
+    width: 100%;
+    background-color:#2f2f33;
+    margin-top: 50px;
+}
+
+/*Left Footer home page*/
+.leftFooter{
+    display: block;
+    height: 350px;
+    width: 33%;
+    float: left;
+}
+
+
+#drCategory{
+    margin-top: 20px;
+    font-size: 25px;
+    margin-left: 28%;
+    color: white;
+}
+
+ul#drCatList{
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 100%;
+}
+ul#drCatList li {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+ul#drCatList li a{
+    color:#008ca5;
+}
+
+ul#drCatList li a:hover{
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #008ca5;
+}
+/*Middle Footer home page*/
+
+.midFooter{
+    display: block;
+    height: 350px;
+    width: 33%;
+    float: left;
+}
+p#contact a{
+    margin-top: 20px;
+    display: block;
+    margin-left: 40%;
+    color: white;
+    font-size: 25px;
+}
+
+#contact a:hover{
+    text-decoration: none;
+    color: #008ca5; 
+}
+#aboutUs a{
+    display: block;
+    margin-left: 40%;
+    color: white;
+    font-size: 25px;
+    margin-top: 20px;
+
+}
+
+#aboutUs a:hover{
+    text-decoration: none;
+    color: #008ca5; 
+}
+
+#followUsOn a{
+    display: block;
+    margin-left: 37%;
+    color: white;
+    font-size: 25px;
+    margin-top: 20px;
+
+}
+
+#followUsOn a:hover{
+    text-decoration: none;
+    color: #008ca5; 
+    }
+
+    p#contact a:hover{
+        background-color: none;
+    }
+/*Social Media Buttons*/
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/*Facebok*/
+.fa-facebook {
+    display: block;
+    background: #3B5998;
+    color: white;
+    margin-left: 150px;
+}
+
+/*Twitter*/
+.fa-twitter {
+    display: block;
+    padding: 10px;
+    background: #55ACEE;
+    color: white;
+    margin-left: 210px;
+    margin-top: -40px;
+}
+
+/*Instagram*/
+.fa-instagram {
+    display: block;
+  background: #125688;
+  color: white;
+  margin-left: 270px;
+  margin-top: -40px;
+}
+
+/*Right Footer Home Page*/
+
+.rightFooter{
+    display: block;
+    float: left;
+    width: 34%;
+    height: 350px;
+
+}
+#cities{
+    margin-top: 20px;
+    display: block;
+    color:white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 35%;
+}
+
+/*Cities list right footer home page*/
+
+ul#cityList{
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 100%;
+}
+
+ul#cityList a{
+       color: #008ca5;
+}
+
+ul#cityList a:hover{
+       background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
