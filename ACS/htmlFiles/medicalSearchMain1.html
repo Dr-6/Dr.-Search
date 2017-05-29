@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-<script> src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"</script>
-<script src="js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script> src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"</script>
+    <script src="medicalSearchMain.js"></script>
+    <link rel="stylesheet" href="medicalSearchMain.css">
+    <title>Medical Search</title>
 </head>
+
 <body ng-app="minmax">
-<div class="container main-content" ng-controller="minmaxCtrl">
-<h1>Select your City</h1>
-<form>
-<div class="form-group">
-    <label for "city">select city</label>
-    <select name="city"
+    <ul>
+      <li><a href="#Home"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a></li>
+      <li><a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Dr. Search</a></li>
+      <li><a class="active" href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a></li>
+      <li><a href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a></li>
+    </ul>
+
+
+
+    <div class="container main-content" ng-controller="minmaxCtrl">
+        <h1>Select your City</h1>
+        <form>
+        <div class="form-group">
+            <label for "city" style="font-size:20px;color:darkblue;"><b>City:</label>
+            <select name="city"
             id="city"
             class="form-control"
             ng-model="formModel.city">
-    <option value="">Please Choose</option>
-    <option value="Berlin">Berlin</option>
-    <option value="Heidelberg">Heidelberg</option>
-    <option value="Munich">Munich</option>
-    <option value="Mannheim">Mannheim</option>
-    <option value="Bad Durkheim">Bad Durkheim</option>
-    <option value="Heilbronn">Heilbronn</option>
-    </select>
-</div>
+            <option value="">Please Choose</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Heidelberg">Heidelberg</option>
+            <option value="Munich">Munich</option>
+            <option value="Mannheim">Mannheim</option>
+            <option value="Bad Durkheim">Bad Durkheim</option>
+            <option value="Heilbronn">Heilbronn</option>
+            </select>
+        </div>
 
-<div class="form-group">
-    <button class="btn btn-primary" ng-click="onSubmit()">Search
-    </button>
-</div>
-</form>
-  
-</div>
+        <div class="form-group">
+            <button class="btn btn-primary " ng-click="onSubmit()">Search</button>
+        </div>
+        </form>
+            <img src="images/logo.png" alt="logo" width="200" height="200">
+
+        <hr>
+        <div class="footer">
+        <h3>Contact<br>About us<br>Follow us on</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        </div>
+
+
 </body>
 </html>
+
