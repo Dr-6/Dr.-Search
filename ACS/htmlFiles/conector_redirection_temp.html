@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Page</title>
+</head>
+
+<body>
+	  <div>
+			 City :	<input type="text" id = "cityTextBox">
+			 Insurance :	<input type="text" id = "insuranceTextBox">
+			 Disease :	<input type="text" id = "diseaseTextBox">
+			 
+			 <br>
+			 <br>
+         <input type="button" value="Redirect Me" onclick="querybaseFunction();" />
+				 <br>
+				 <br>
+				 <img id="doctorImage">
+				 			 Address :	<input type="text" id = "addressesBox">
+				             Timings : <input type="textarea" id ="timingsBox">
+
+				
+      </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	<script src="./angularTry.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+    authDomain: "drseach-f1f59.firebaseapp.com",
+    databaseURL: "https://drseach-f1f59.firebaseio.com",
+    projectId: "drseach-f1f59",
+    storageBucket: "drseach-f1f59.appspot.com",
+    messagingSenderId: "179157502879"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://unpkg.com/querybase@0.6.0"></script>
+
+
+<script type="text/javascript">
+            
+			
+			function Redirect() {			   
+			  var rootRef = firebase.database().ref().child("users");
+			   rootRef
+			   .orderByChild("city")
+			   .equalTo("Berlin")
+			   .on("child_added", snap => {
+					var name = snap.child("name").val();
+					var email = snap.child("email").val();
+					var city = snap.child("city").val();
+					alert(name +" and " + email + " and " + city);
+			   });
+
+            }
+
+</script>
+
+</body>
+
+</html>
