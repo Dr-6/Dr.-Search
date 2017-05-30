@@ -1,0 +1,158 @@
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+/*-------------HEADING TABS--------------*/
+.top{
+    background-color:skyblue;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+img#logo{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 100%;
+
+}
+
+li a {
+    display: block;
+    position: static;
+    color: orange;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+        margin-left: 150px;
+        font-family: sans-serif;
+        font-size: 16px;
+        -webkit-transform: all 1s ease;/*safari and chrome*/
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+}
+
+li {
+    float: left;
+}
+
+a:hover:not(.active) {
+    background-color: white;
+    -webkit-transform:scale(1.25);/*safari and chrome*/
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.active {
+background-color: #267714;
+}
+
+/*
+
+ul#tabList{
+    display: table;
+    list-style: none;
+    margin-left: 350px;
+    color: white;
+}
+
+ul#tabList a{
+    color: white;
+    text-decoration: none;
+}
+ul#tabList a:hover{
+    color: #008ca5;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+ }
+ul#tabList li{
+    display: inline;
+}
+
+#home{
+    background-color:#008ca5;
+    height: 30px;
+}
+
+#drSearch{
+    margin-left: 30px;
+}
+
+#medicalStore{
+    display: inline;
+    margin-left: 30px;
+}
+
+#healthArticle{
+    display: inline;
+    margin-left: 30px;
+}
+
+#tab_aboutUs{
+    display: inline;
+    margin-left: 30px;
+}
+
+*/
+h1{
+    color: black;
+    text-align: center;
+}
+
+
+p{
+    color: black;
+    align-content: center;
+    display: block;
+    padding-left: 50px;
+    font-family:Monotype Corsiva, Times, Serif;
+    font-size: 25px;
+    width:800px;
+}
+
+ul#bottomLinks {
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 1000px;
+    border-radius: 8px;
+
+}
+/*
+li{
+    list-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    text-decoration: none;
+    color: skyblue;
+}
+*/
