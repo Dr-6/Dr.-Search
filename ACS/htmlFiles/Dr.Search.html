@@ -9,14 +9,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/css/bootstrap-select.css" />
 
 <!-- All js file links <--> 
+
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="  crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.0/js/bootstrap-select.js"></script>
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>-->
-<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/angular.js"></script>
-<script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/selectpicker.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<!-- <script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/angular.js"></script>-->
+<script src="H:/SRH/SRH SEM-2/Advance Compter Science/Dr. search/Scripts/new/Dr.Search.js"></script>
 <script src="H:/SRH/SRH SEM-2/Advance Compter Science/JavaScript demo/angularfire.min.js"></script>
 
 
@@ -42,6 +44,8 @@
                 <option value="Throat">Throat</option>
                 <option value="Heart">Heart</option>
                 <option value="Bones">Bones</option>
+                <option value="Orthopedic">Orthopedic</option>
+                <option value="Surgeon">Surgeon</option>
     
             </select>
             </div>
@@ -109,11 +113,43 @@
             <script src="https://unpkg.com/querybase@0.6.0"></script>
 
 
+
             <!-- Code for creating submit button-->
 
             <div class="form-group">
                 <button class="btn btn-primary" ng-click="onSubmit()"> Search </button>
             </div>
+
+
+
+<!-- printing database values 
+
+            <table ng-controller="DrsearchController" border="2">
+                
+                    <tr ng-repeat="rec in records">
+                    <td>{{rec.Name}}</td>
+                   <br> <td>{{rec.Insurance}}</td> </br>
+                    <br> <td>{{rec.Category}}</td> </br>
+                    </tr>
+                
+            </table>
+-->
+
+<table ng-controller="DrsearchController" border="1">
+                
+                    <tr ng-repeat="(rec,recName) in records">
+                    <td> Image : {{recName.Image}}</td>
+                    <td>Name : {{recName.Name}} <br></br>
+                        Insurances : {{recName.Insurance}}<br></br>
+                        Category : {{recName.Category}}
+                        </td> 
+                    </tr>
+                
+            </table>
+
+
+
+
     </form>
     
     </div>
