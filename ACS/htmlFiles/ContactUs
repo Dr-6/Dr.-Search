@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       <title> Contact Us </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--Font-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link href="F:\a.Germany\5th SAD\Website\styles\style_contactUs.css" rel="stylesheet" type="text/css"> 
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+    </head>
+
+<body>
+            <!-- <div class="top">
+            <ul id="tabList">
+                <li> <a href="F:\a.Germany\5th SAD\Website\index.html" id="home"> Home </a> </li>
+                <li> <a href="#" id="drSearch"> Dr. Search </a></li>
+                <li> <a href="#" id="medicalStore"> Medical Store </a></li>
+                <li> <a href="#" id="healthArticle"> Health Articles </a></li>
+                <li> <a href="#" id="tab_aboutUs"> About Us </a></li>
+            </ul>
+        </div>
+
+        -->
+
+        <ul>
+      <li><a href="F:\a.Germany\5th SAD\Website\index.html"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a></li>
+      <li><a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Dr. Search</a></li>
+      <li><a href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a></li>
+      <li><a href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a></li>
+    </ul>
+
+
+        <img id="logo" src="images/logo.png" alt="logo" >
+        
+        <h1> Contact Us </h1>
+        <p id="about"> We are the team of Dr. Search. All the content of this Website is developed by our developers.</p><br>
+        
+        <h2> This is our team. </h2><br>
+
+        <!-- Team Photo -->
+
+        <div class="team">
+        <img id="sagar" src="F:\a.Germany\5th SAD\Website\images\Sagar.png" alt="Sagar Shimpi" width="190" height="230">
+        <img id="ajinkya" src="F:\a.Germany\5th SAD\Website\images\Ajinkya.jpg" alt="Ajinkya Patil" width="190" height="230">
+        <img id="renuka" src="F:\a.Germany\5th SAD\Website\images\Renuka.jpg" alt="Renuka Gumaste" width="190" height="230">
+        <img id="tilak" src="F:\a.Germany\5th SAD\Website\images\Tilak.jpg" alt="Tilak Chaudhari" width="190" height="230">
+        <img id="rishikesh" src="F:\a.Germany\5th SAD\Website\images\Rishikesh.jpg" alt="Rishikesh Shinde" width="190" height="230">
+        <img id="priyanka" src="F:\a.Germany\5th SAD\Website\images\Priyanka.jpg" alt="Priyanka Lanjewar" width="190" height="230">
+        </div>
+
+        <div class="team_info">
+            <h4 id="sagarInfo">Sagar Shimpi <br> Front-End UI Developer </h4>
+            <h4 id="ajinkyaInfo"> Ajinkya Patil<br> Back-End Developer </h4>
+            <h4 id="renukaInfo"> Renuka Gumaste <br> Front-End Developer </h4>
+            <h4 id="tilakInfo"> Tilak Chaudhari <br> Middleware Support</h4>
+            <h4 id="rishiInfo"> Rishikesh Shinde <br> Front-End Developer </h4>
+            <h4 id="priyankaInfo"> Priyanka Lanjewar <br> Front-End Developer </h4>
+        </div>
+
+</body>
+</html>
+
