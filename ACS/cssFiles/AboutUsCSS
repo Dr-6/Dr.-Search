@@ -64,68 +64,25 @@ a:hover:not(.active) {
 background-color: #267714;
 }
 
-/*
-
-ul#tabList{
-    display: table;
-    list-style: none;
-    margin-left: 350px;
-    color: white;
-}
-
-ul#tabList a{
-    color: white;
-    text-decoration: none;
-}
-ul#tabList a:hover{
-    color: #008ca5;
-    background-color: white;
-    text-decoration: none;
-    border-radius: 5px;
- }
-ul#tabList li{
-    display: inline;
-}
-
-#home{
-    background-color:#008ca5;
-    height: 30px;
-}
-
-#drSearch{
-    margin-left: 30px;
-}
-
-#medicalStore{
-    display: inline;
-    margin-left: 30px;
-}
-
-#healthArticle{
-    display: inline;
-    margin-left: 30px;
-}
-
-#tab_aboutUs{
-    display: inline;
-    margin-left: 30px;
-}
-
-*/
 h1{
     color: black;
     text-align: center;
 }
 
-
 p{
+    text-align: center;
+}
+p.aboutUs{
     color: black;
     align-content: center;
-    display: block;
-    padding-left: 50px;
+    display: flex;
     font-family:Monotype Corsiva, Times, Serif;
     font-size: 25px;
-    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 ul#bottomLinks {
@@ -134,25 +91,16 @@ ul#bottomLinks {
     padding: 0;
     overflow: hidden;
     background-color: #2f2f33;
-    width: 1000px;
+    width: auto;
     border-radius: 8px;
-
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
 }
-/*
-li{
-    list-style: none;
-    font-family:Arial, Helvetica, sans-serif;
+
+p{
     font-size: 20px;
-    margin-left: 30px;
+
 }
 
-li a{
-    text-decoration: none;
-    color: black;
-}
-
-li a:hover{
-    text-decoration: none;
-    color: skyblue;
-}
-*/
