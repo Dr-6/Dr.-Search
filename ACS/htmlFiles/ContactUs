@@ -25,19 +25,7 @@
     </head>
 
 <body>
-            <!-- <div class="top">
-            <ul id="tabList">
-                <li> <a href="F:\a.Germany\5th SAD\Website\index.html" id="home"> Home </a> </li>
-                <li> <a href="#" id="drSearch"> Dr. Search </a></li>
-                <li> <a href="#" id="medicalStore"> Medical Store </a></li>
-                <li> <a href="#" id="healthArticle"> Health Articles </a></li>
-                <li> <a href="#" id="tab_aboutUs"> About Us </a></li>
-            </ul>
-        </div>
-
-        -->
-
-        <ul>
+    <ul>
       <li><a href="F:\a.Germany\5th SAD\Website\index.html"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a></li>
       <li><a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Dr. Search</a></li>
       <li><a href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a></li>
@@ -62,16 +50,7 @@
         <img id="rishikesh" src="F:\a.Germany\5th SAD\Website\images\Rishikesh.jpg" alt="Rishikesh Shinde" width="190" height="230">
         <img id="priyanka" src="F:\a.Germany\5th SAD\Website\images\Priyanka.jpg" alt="Priyanka Lanjewar" width="190" height="230">
         </div>
-
-        <div class="team_info">
-            <h4 id="sagarInfo">Sagar Shimpi <br> Front-End UI Developer </h4>
-            <h4 id="ajinkyaInfo"> Ajinkya Patil<br> Back-End Developer </h4>
-            <h4 id="renukaInfo"> Renuka Gumaste <br> Front-End Developer </h4>
-            <h4 id="tilakInfo"> Tilak Chaudhari <br> Middleware Support</h4>
-            <h4 id="rishiInfo"> Rishikesh Shinde <br> Front-End Developer </h4>
-            <h4 id="priyankaInfo"> Priyanka Lanjewar <br> Front-End Developer </h4>
-        </div>
-
 </body>
 </html>
+
 
