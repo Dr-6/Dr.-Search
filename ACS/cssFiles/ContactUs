@@ -4,13 +4,6 @@ body,html{
 }
 
 /*-------------HEADING TABS--------------*/
-.top{
-    background-color:skyblue;
-    height: 30px;
-    font-size: 20px;
-    margin: 0 auto;
-}
-
 img#logo{
     display: block;
     width: 150px;
@@ -69,37 +62,39 @@ h1{
     text-align: center;
 }
 
-p{
+#about{
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: 'Raleway',sans-serif; 
+    font-size: 25px;
+}
+
+h2{
+    margin-top: 20px;
     text-align: center;
 }
-p.aboutUs{
-    color: black;
+
+.team{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
     align-content: center;
+    justify-content: center;
+}
+
+.drTeam{
     display: flex;
-    font-family:Monotype Corsiva, Times, Serif;
-    font-size: 25px;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 85%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
 }
-
-ul#bottomLinks {
-    list-style-type: none;
-    margin-top: -8px;
-    padding: 0;
-    overflow: hidden;
-    background-color: #2f2f33;
-    width: 1000px;
-    border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-content: center;
-}
-
-p{
-    font-size: 20px;
-
+img:hover{
+    opacity: 0.7;
 }
