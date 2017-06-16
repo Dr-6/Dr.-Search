@@ -1,0 +1,69 @@
+{
+  "doctors" : {
+    "-KkzmLFXDdsjg2-CjLkK" : {
+      "address" : "ATOS Praxisclinic Heidelberg Bismarckstrasse 9-15  69115 Heidelberg, Germany",
+      "city" : "Heidelberg",
+      "email" : "-",
+      "insurances" : "AOK,TK,Mawista",
+      "name" : "Priv-Doz. Dr. med. Erhan Basad",
+      "phoneNumber" : "06221/983140",
+      "review" : "5`The doctor was good, very friendly`22/11/2016:4`Good one`22/11/2016:5`After successful implantation of individualized total prostheses of both knees in the case of strongly degenerative bone substance due to long-term polyarthritis, my quality of life has risen significantly - longer running, standing, climbing stairs, cycling again easily possible. PD Dr. Basad has intensively diagnosed, carefully advised and performed excellently. On the first day, I was able to strain my knee without pain. The physiotherapists in the rehabilitation were amazed at my rapid healing progress, restoring full mobility`25-06-2015",
+      "specialization" : "Orthopedic",
+      "website" : "www.basad.de"
+    },
+    "-Kl-2mUnjlIihD5wnEVq" : {
+      "address" : "Max-Reger-Str. 5  69121 Heidelberg, Germany",
+      "city" : "Heidelberg",
+      "email" : "Sagar@sms.com",
+      "insurances" : "AOK,TK",
+      "name" : "Dr. med. Christoph Czermak",
+      "phoneNumber" : "06221/6479778",
+      "querybase~~Y2l0eX5+ZW1haWw=" : "querybase~~SGVpbGJyb25ufn5TYWdhckBzbXMuY29t",
+      "querybase~~Y2l0eX5+ZW1haWx+fm5hbWU=" : "querybase~~SGVpbGJyb25ufn5TYWdhckBzbXMuY29tfn5TYWdhcg==",
+      "querybase~~Y2l0eX5+bmFtZQ==" : "querybase~~SGVpbGJyb25ufn5TYWdhcg==",
+      "querybase~~ZW1haWx+fm5hbWU=" : "querybase~~U2FnYXJAc21zLmNvbX5+U2FnYXI=",
+      "review" : "5`Very friendly doctor`28-05-2017:5`Very good doctor`29-05-2017:",
+      "specialization" : "Surgeon",
+      "website" : "www.pelzer-czermak.de"
+    },
+    "user1" : {
+      "address" : "Eppelheim, Heidelberg",
+      "city" : "Heidelberg",
+      "email" : "ajinkyarangnathpatil@gmail.com",
+      "image" : "./IMG_1822-4.jpg",
+      "insurances" : "AOK,TK,Mawista",
+      "name" : "Ajinkya",
+      "phone_number" : 9028991746,
+      "qualification" : "Master's Degree",
+      "review" : "5`Very friendly doctor`28-05-2017:4`Very good doctor`29-05-2017:",
+      "specialization" : "Throat",
+      "timing" : "Mon:8:00:17:00\nTue:8:00:17:00\nWed:8:00:17:00\nThur:8:00:17:00\nFri:8:00:14:00",
+      "website" : "ajinkya.com"
+    },
+    "user2" : {
+      "address" : "Blumberger Damm 130,\n12685 Berlin Germany",
+      "city" : "Berlin",
+      "email" : "abc@cyz.com",
+      "insurances" : "AOK,TK",
+      "name" : "Thomas",
+      "phone_number" : "030/322923322",
+      "qualification" : "Master's Degree",
+      "review" : "5`Very friendly doctor`28-05-2017:3`Very good doctor`29-05-2017:",
+      "specialization" : "Lungs",
+      "timing" : "Mon:8:00:17:00\nTue:8:00:17:00\nWed:8:00:17:00\nThur:8:00:17:00\nFri:8:00:14:00",
+      "website" : "https://baumer.com"
+    }
+  },
+  "medicals" : {
+    "Store1" : {
+      "city" : "Heidelberg",
+      "contact" : 123,
+      "name" : "store apotheke"
+    },
+    "store2" : {
+      "city" : "Heidelberg",
+      "contact" : 123,
+      "name" : "store2 apotheke"
+    }
+  }
+}
