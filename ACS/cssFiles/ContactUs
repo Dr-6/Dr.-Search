@@ -1,0 +1,100 @@
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+/*-------------HEADING TABS--------------*/
+img#logo{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f2f33;
+    width: 100%;
+
+}
+
+li a {
+    display: block;
+    position: static;
+    color: orange;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+        margin-left: 150px;
+        font-family: sans-serif;
+        font-size: 16px;
+        -webkit-transform: all 1s ease;/*safari and chrome*/
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+}
+
+li {
+    float: left;
+}
+
+a:hover:not(.active) {
+    background-color: white;
+    -webkit-transform:scale(1.25);/*safari and chrome*/
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.active {
+background-color: #267714;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+#about{
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: 'Raleway',sans-serif; 
+    font-size: 25px;
+}
+
+h2{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.team{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.drTeam{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 85%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+img:hover{
+    opacity: 0.7;
+}

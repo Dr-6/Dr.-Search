@@ -1,0 +1,49 @@
+{
+  "doctors" : {
+    "-KkzmLFXDdsjg2-CjLkK" : {
+      "city" : "Mannheim",
+      "email" : "david@dravid.com",
+      "insurances" : "AOK,TK,Mawista",
+      "name" : "David",
+      "review" : "5`The doctor was good, very friendly`22/11/2016:4`Good one`22/11/2016",
+      "specialization" : "Bones"
+    },
+    "-Kl-2mUnjlIihD5wnEVq" : {
+      "city" : "Heidelberg",
+      "email" : "Sagar@sms.com",
+      "insurances" : "AOK,TK",
+      "name" : "Sagar",
+      "querybase~~Y2l0eX5+ZW1haWw=" : "querybase~~SGVpbGJyb25ufn5TYWdhckBzbXMuY29t",
+      "querybase~~Y2l0eX5+ZW1haWx+fm5hbWU=" : "querybase~~SGVpbGJyb25ufn5TYWdhckBzbXMuY29tfn5TYWdhcg==",
+      "querybase~~Y2l0eX5+bmFtZQ==" : "querybase~~SGVpbGJyb25ufn5TYWdhcg==",
+      "querybase~~ZW1haWx+fm5hbWU=" : "querybase~~U2FnYXJAc21zLmNvbX5+U2FnYXI=",
+      "specialization" : "Skin"
+    },
+    "user1" : {
+      "address" : "Eppelheim, Heidelberg",
+      "city" : "Heidelberg",
+      "email" : "ajinkyarangnathpatil@gmail.com",
+      "image" : "./IMG_1822-4.jpg",
+      "insurances" : "AOK,TK,Mawista",
+      "name" : "Ajinkya",
+      "phone_number" : 9028991746,
+      "qualification" : "Master's Degree",
+      "specialization" : "Throat",
+      "timing" : "Mon:8:00:17:00\nTue:8:00:17:00\nWed:8:00:17:00\nThur:8:00:17:00\nFri:8:00:14:00",
+      "website" : "ajinkya.com"
+    },
+    "user2" : {
+      "address" : "Blumberger Damm 130,\n12685 Berlin Germany",
+      "city" : "Berlin",
+      "email" : "abc@cyz.com",
+      "insurances" : "AOK,TK",
+      "name" : "Thomas",
+      "phone_number" : "030/322923322",
+      "qualification" : "Master's Degree",
+      "review" : "5`The doctor was good, very friendly`22/11/2016:4`Good one`22/11/2016",
+      "specialization" : "Lungs",
+      "timing" : "Mon:8:00:17:00\nTue:8:00:17:00\nWed:8:00:17:00\nThur:8:00:17:00\nFri:8:00:14:00",
+      "website" : "https://baumer.com"
+    }
+  }
+}

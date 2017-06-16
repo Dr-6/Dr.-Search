@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title> About Us </title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--Font-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link href="F:\a.Germany\5th SAD\Website\styles\style_aboutUs.css" rel="stylesheet" type="text/css"> 
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+    </head>
+
+<body>
+       <ul>
+      <li><a href="F:\a.Germany\5th SAD\Website\index.html"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a></li>
+      <li><a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Dr. Search</a></li>
+      <li><a href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a></li>
+      <li><a href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a></li>
+    </ul>
+
+        <img id="logo" src="images/logo.png" alt="logo" >
+        <h1> About Us </h1>
+        
+        <div class="aboutUs">
+           <center> <p> "The requirement for health care is unfulfilling, in this day and age when 
+            new diseases and new technologies are coming every day. We have poor 
+            health care system, poor doctor information, and inexperienced doctors. 
+            Many people find it difficult to find doctors and specialists in their
+            cities. The same goes for medical stores as well, many people do not 
+            know medical stores and their availabilities.
+            The traditional ways of health care are time consuming and inefficient. 
+            With growth in usage of Internet, there is an opportunity for people to 
+            use digital means for retrieving and searching the needed information take 
+            care of their health in an efficient way.
+            Dr. Search web application is built on following basic features:" </p>
+            <ul id="bottomLinks">
+                <li> <a href="F:\a.Germany\5th SAD\Website\index.html"> Search a Doctor </a></li>
+                <li> <a href="#"> Find a medical store </a> </li>
+                <li> <a href="#"> Read Health Articles </a> </li>
+            </ul><br>
+            <p> Thanks for your support.!!!<br>
+            - Team Dr. Search
+            </p>
+        </div>
+
+</body>
+</html>
