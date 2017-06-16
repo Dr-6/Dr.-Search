@@ -16,3 +16,26 @@
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet"> 
 <!--script src="medicalSearchMain.js"></script-->
+
+            
+<div ng-controller = "testCtrl">
+</div>
+
+<div ng-view>
+</div>
+</body>
+<script src = ".\scripts\app.js"></script>
+<script src = ".\scripts\medicalSearchMain.js"></script>
+<script src = ".\scripts\medicalList.js"></script>
+<script>
+var config = {
+    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+    authDomain: "drseach-f1f59.firebaseapp.com",
+    databaseURL: "https://drseach-f1f59.firebaseio.com",
+    projectId: "drseach-f1f59",
+    storageBucket: "drseach-f1f59.appspot.com",
+    messagingSenderId: "179157502879"
+  };
+firebase.initializeApp(config);
+</script>
+</html>
