@@ -37,3 +37,27 @@
         <div ng-view></div>    
 
 </body>
+	
+	
+	<!-- including links of javascript files.-->
+<script src=".\scripts\drSearchMain.js"> </script>
+<script src = ".\scripts\drList.js"></script>
+
+     <!-- databse connectivity code-->
+            <script>
+  
+                    var config = {
+
+                    apiKey: "AIzaSyDWBk69uq9bc-VmUtnQneLqypmcg09ipzQ",
+                    authDomain: "drseach-f1f59.firebaseapp.com",
+                    databaseURL: "https://drseach-f1f59.firebaseio.com",
+                    projectId: "drseach-f1f59",
+                    storageBucket: "drseach-f1f59.appspot.com",
+                    messagingSenderId: "179157502879"
+                                
+                            };
+
+                    firebase.initializeApp(config);
+  
+            </script>
+    </html>
