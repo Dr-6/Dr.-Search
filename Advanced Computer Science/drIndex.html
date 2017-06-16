@@ -32,6 +32,21 @@
 
 <body>
    
+	<!-- navigation bar and logo-->
+      <header class="header">
+        <img id="one" src="../images/logo.png" alt="logo" width="70" height="70">
+        <p id="two"><b>Dr.  Search</b>
+		</p>
+
+        <div class="topnav" id="myTopnav">
+          <a href="#Home"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a>
+          <a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Doctor Search</a>
+          <a class="active" href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a>
+          <a href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a>
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+      </header> 
+	
         <div ng-controller="mainCtrl">
         </div>
         <div ng-view></div>    
