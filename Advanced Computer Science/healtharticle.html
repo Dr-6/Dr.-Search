@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Volkhov" rel="stylesheet">
+<link rel="stylesheet" href="navi.css"> 
+
+<script>
+   
+function preferedArticle() {
+    prefer = document.forms[0].article.value;
+    if(prefer =='Eyes'){
+         document.getElementById("dynamicContent").innerHTML = "<b>Article-1</b><a href=\"https://www.aao.org/eye-health/news/studies-look-at-effects-of-marijuana-on-vision\">  Studies Look at Effects of Marijuana on Vision</a><p><b>Article-2</b><a href=\"https://www.aao.org/eye-health/news/pre-eclampsia-pregnancy-risk-retina\"> Does Pre-Eclampsia During Pregnancy Increase Risk to Mothers Eyes?</a></p><t><b>Article-3</b><a href=\"https://www.aao.org/eye-health/news/exercise-drinking-may-play-role-in-vision-impairme\"> Exercise and Drinking May Play a Role in Vision Impairment Risk</a></t>"
+    }else if(prefer == 'Blood Pressure'){
+        document.getElementById("dynamicContent").innerHTML = "<b>Article-1</b><a href=\"https://newsinhealth.nih.gov/issue/jan2016/feature1\"> Blood Pressure Matters</a><p><b>Article-2</b><a href=\"http://www.aarp.org/health/conditions-treatments/info-2016/high-blood-pressure-hypertension.html\"> 15 Things You Better Know About Your Blood Pressure</a></p><t><b>Article-3</b><a href=\"https://www.cardiosmart.org/News-and-Events/2017/05/Belly-Fat-Increases-Risk-for-High-Blood-Pressure\"> Belly Fat Increases Risk for High Blood Pressure</a></t>"
+    }else if(prefer == 'Select'){
+    document.getElementById("dynamicContent").innerHTML = "<b>Alert: Please select proper input</b>" 
+    }else if(prefer == 'Diabetes'){
+    document.getElementById("dynamicContent").innerHTML = "<b>Article-1</b><a href=\"http://www.mayoclinic.org/diseases-conditions/diabetes/in-depth/diabetes-management/art-20045803\"> 10 ways to avoid diabetes complications</a><p><b>Article-2</b><a href=\"http://www.healthline.com/health/diabetes/facts-statistics-infographic#1\"> Diabetes by the Numbers: Facts, Statistics, and You</a></p><t><b>Article-3</b><a href=\"http://www.encyclopedia.com/medicine/diseases-and-conditions/pathology/diabetes\"> Know more about Diabetes</a></t>"
+    }else if(prefer == 'Heart'){
+    document.getElementById("dynamicContent").innerHTML = "<b>Article-1</b><a href=\"http://www.healthline.com/health/heart-disease/warning-signs-heart-attack#overview1\"> Warning Signs of a Heart Attack</a><p><b>Article-2</b><a href=\"http://www.healthline.com/health/heart-disease/after-heart-attack\"> What to Do After Surviving a Heart Attack</a></p><t><b>Article-3</b><a href=\"http://www.healthline.com/health/heart-attack/symptoms#overview1\"> Heart Attack Symptoms</a></t>"
+    }else if(prefer == 'Cancer'){
+    document.getElementById("dynamicContent").innerHTML = "<b>Article-1</b><a href=\"http://www.healthline.com/health/cancer-warning-signs#overview1\"> Cancer Warning Signs</a><p><b>Article-2</b><a href=\"http://www.healthline.com/health/mens-cancer-early-symptoms\"> 10 Early Symptoms of Cancer in Men</a></p><t><b>Article-3</b><a href=\"http://www.healthline.com/health/benign\"> What are Benign tumors?</a></t>"
+    }else{
+    document.getElementById("dynamicContent").innerHTML = "Changed The Contents of the Div Selsected is:"+prefer;
+    }
+}
+
+</script>
+</head>
+
+<body>
+ <img id="Hlogo" src="\SAD\code\health.png" alt="logo1">
+<form>
+    <div class="choose">
+<h3>Choose which article you want to read</h3>
+
+<!--<select id="article" onchange="preferedArticle()">-->
+    
+<select id="article" onchange="preferedArticle()">
+<option value="" selected disabled>Select</option>    
+<option value="Eyes">Eyes </option>
+<option value="Blood Pressure">Blood Pressure</option>
+<option value="Diabetes">Diabetes</option>
+<option value="Heart">Heart</option>
+<option value="Cancer">Cancers</option>
+</select>
+    </div>
+</form>
+
+<div class="articlelist" id="dynamicContent">
+</div>
+
+</body>
+</html>
