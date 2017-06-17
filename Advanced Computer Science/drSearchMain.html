@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
   
-
+	<head>
+        <link rel="stylesheet" href=".\styles\drSearchMain.css">
+    </head>
     <body>   
+	     <!-- Select box Dr.Category -->
+         	<div id="selection">
+            	<div id="boxOne">
             
             <h2>Doctor Category</h2>
             <select  ng-model="selectedCategory">
@@ -18,7 +23,8 @@
             </select>
             </div>
 
-            
+            <!-- Select box for User.City -->
+            <div id="boxTwo">
             <h2>City</h2>
             <select ng-model="selectedCity">
 	  
@@ -33,7 +39,9 @@
             </select>
             </div>
 
-           
+            <!-- select box for insurance company -->
+
+            <div id="boxThree">
             <h2>Insurance Company</h2>
             
             <select ng-model="selectedInsurance" >  
@@ -51,7 +59,13 @@
             <div>
                 <a id="search" ng-href="#/drList/{{selectedCategory}}/{{selectedCity}}/{{selectedInsurance}}"> Search </a>
             </div>
-			
-			</body>
+		<hr id="footerHr" style="margin-top: 14.1%; height: 3px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+		<div class="footer">
+		<h3>Contact<br>About us<br>Follow us on</h3>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		</div>			
+</body>
 
 </html>
