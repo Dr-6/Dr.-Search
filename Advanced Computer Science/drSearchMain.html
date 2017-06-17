@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  
+
+    <body>   
+            
+            <h2>Doctor Category</h2>
+            <select  ng-model="selectedCategory">
+	            
+                <option id="drCat" value="" selected disabled> Select Doctor Category</option>
+                <option value="Surgeon">Surgeon</option>
+                <option value="Throat">Throat</option>
+                <option value="Heart">Heart</option>
+                <option value="Bones">Bones</option>
+                <option value="Orthopedic">Orthopedic</option>
+                
+    
+            </select>
+            </div>
+
+            
+            <h2>City</h2>
+            <select ng-model="selectedCity">
+	  
+                <option value="" selected disabled>Select your city</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Heidelberg">Heidelberg</option>
+                <option value="Munich">Munich</option>
+                <option value="Mannheim">Mannheim</option>
+                <option value="Bad Durkheim">Bad Durkheim</option>
+                <option value="Heilbronn">Heilbronn</option>
+
+            </select>
+            </div>
+
+           
+            <h2>Insurance Company</h2>
+            
+            <select ng-model="selectedInsurance" >  
+
+	            <option value="" selected disabled>Select insurance company</option>
+                <option value="AOK">AOK</option>
+                <option value="TK">TK</option>
+                <option value="Mawista">Mawista</option>
+    
+            </select>
+            </div>
+
+            <!-- Code for creating submit button-->
+            </div>
+            <div>
+                <a id="search" ng-href="#/drList/{{selectedCategory}}/{{selectedCity}}/{{selectedInsurance}}"> Search </a>
+            </div>
+			
+			</body>
+
+</html>
