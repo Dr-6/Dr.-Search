@@ -30,6 +30,29 @@ function preferedArticle() {
 
 </script>
 </head>
+   
+  <header>
+        <img id="one" src="\SAD\code\Logo.png" alt="logo" width="70" height="70">
+        <p id="two"><b>Dr.  Search</b></p>
+
+        <div class="topnav" id="myTopnav">
+          <a href="#Home"><i class="fa fa-home" style="font-size:25px;color:lightblue;"></i> Home</a>
+          <a href="#Dr. Search"><i class="fa fa-search" style="font-size:25px;color:lightblue;"></i> Doctor Search</a>
+          <a href="#Medical Search"><i class="fa fa-medkit" style="font-size:25px;color:lightblue;"></i> Medical Search</a>
+          <a class="active" href="#Health articles"><i class="fa fa-heartbeat" style="font-size:25px;color:lightblue;"></i> Health Articles</a>
+          <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+      </header>
+   <script>
+      function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+</script>  
 
 <body>
  <img id="Hlogo" src="\SAD\code\health.png" alt="logo1">
@@ -51,6 +74,20 @@ function preferedArticle() {
 </form>
 
 <div class="articlelist" id="dynamicContent">
+</div>
+   <hr>
+  <div class = "footer">
+    <div id="middle">
+      <p id="mid_header1"> <a href="#">Contact Us</a> </p> <br>
+      <p id="mid_header2"> <a href="#">About Us </a> </p> <br>
+      <p id="mid_header3"> <a href="#">Follow Us On</a> </p> <br>
+
+      <div id="socialLogo">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
 </div>
 
 </body>
