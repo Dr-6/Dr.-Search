@@ -5,6 +5,15 @@
 </head>
  
     <div id="floating-panel">
+    <b style="color:orange">Choose Your Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+    <br>
 <body>
 	
 <div id="list" ng-init="initMap()">	
@@ -42,7 +51,8 @@
           
           </div>
           <br>  
-             <button ng-click="setMarker(recName.latitude,recName.longitude)">show on map</button>                
+             <button ng-click="setMarker(recName.latitude,recName.longitude)">show on map</button>      v
+		<button ng-click="bool=!bool">Show/Hide more data</button> 
              <hr id="dotted">
 	  </div>
       </div>
