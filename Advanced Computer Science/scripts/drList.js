@@ -6,24 +6,52 @@ app.controller("drlistCtrl",function ($scope,$routeParams,$firebaseObject,$rootS
 var map;
 var marker;
   $scope.initMap = function(){
-                 var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+                  
+                  if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+                currentLat= position.coords.latitude;
+                currentLon= position.coords.longitude;
+       
+           var myCenter = new google.maps.LatLng(currentLat,currentLon);//(51.508742,-0.120850);
+                 currentLatLon = new google.maps.LatLng(currentLat, currentLon);
                  var mapCanvas = document.getElementById("map");
-                 console.log("hi");
-                 var mapOptions = {center: myCenter, zoom: 5};
+               
+                 var mapOptions = {center: myCenter, zoom: 14,  mapTypeId: google.maps.MapTypeId.ROADMAP};
                  map = new google.maps.Map(mapCanvas, mapOptions);
                  marker = new google.maps.Marker({
                  position: myCenter,
-                 animation: google.maps.Animation.BOUNCE
+                 animation: google.maps.Animation.DROP
                  });                
                  marker.setMap(map);
+                 markerArray.push(marker);
+                 
+                 }
             }
-  /*marker for map*/
-  $scope.setMarker = function(lat,lng){
-    console.log(lat)
-    var latlng = new google.maps.LatLng(lat, lng);
+                                                 
+ $scope.setMarker = function(lati,longi){
     
+    console.log(lati);
+    
+    var latlng = new google.maps.LatLng(lati, longi);
     map.setZoom(14);
     map.setCenter(latlng);
+
+    marker = new google.maps.Marker({
+                 position: latlng,
+                 animation: google.maps.Animation.DROP
+                 });   
+
     marker.setPosition(latlng);
-  }	   
+    markerArray.push(marker);
+
+        $scope.distanceCalculator(lati,longi);
+        document.getElementById('mode').addEventListener('change', function() {
+                
+          $scope.distanceCalculator(lati, longi);
+        });
+
+  } 
+                                                
+                                                 
+ 
 });
