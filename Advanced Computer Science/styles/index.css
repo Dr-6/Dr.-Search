@@ -97,3 +97,80 @@ h1{
 .name_logo #logo{
   display: inline-block;
 }
+
+/* Buttons */
+
+.buttons{
+  margin: 100px auto;
+/*  background-color: blue; */
+  width: 800px;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-height: 340px;
+  min-height: 160px;
+  text-align: center;
+  /*    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;*/
+
+}
+
+.buttons #doctor{
+  float: left;
+}
+
+.buttons #doctor #doctor_text a{
+  color: skyblue;
+  font-size: 20px;
+}
+
+.buttons #doctor #doctor_text a:hover{
+  font-weight: bold;
+  text-decoration: none; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
+}
+
+.buttons #medical #medical_text a{
+  color: skyblue;
+  font-size: 20px;
+}
+
+.buttons #medical #medical_text a:hover{
+   font-weight: bold;
+  text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttons #doctor #medical_text{
+  margin-top: 25px;
+}
+
+.buttons #medical{
+  margin-left: 150px;
+float: left;
+}
+
+.buttons #article{
+float: right;
+}
+
+img:hover{
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttons #article #article_text a{
+  color: skyblue;
+  font-size: 20px;
+}
+
+.buttons #article #article_text a:hover{
+  font-weight: bold;
+  text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
