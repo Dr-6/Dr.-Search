@@ -1,0 +1,43 @@
+<html>
+
+<body>
+<div style="overflow-y:auto" ng-repeat="recName in recordArray">        
+          <div ng-mouseover="setMarker(recName.latitude,recName.longitude)">
+              <p style="margin-left:10px; font-size: 22px; display: inline-block; left: 50px; margin-top: 10px;"><b>{{recName.name}}</b></p><br>
+              <img id="drImg" src={{recName.image}} alt="Picture of Doctor"></img>
+              <div id="addAndph" class="fade">
+                <br>
+                 <b>Address</b> : {{recName.address}} <br>
+                  <b>Phone Number</b> : {{recName.phone_number}}
+              </div>
+			  
+			  
+			  </div> 
+          <div id="drDetails">  
+          <div ng-if="bool" class="fade">
+                    <br><br><br><br>
+                    <b>Email</b> : <span style="color:red">{{recName.email}} </span> <br>
+                    <b>Languages</b> : {{recName.languages}} <br>
+                    <b>Website</b> : {{recName.website}} <br>
+                    <b>Specialization</b> : {{recName.specialization}} <br>
+                    <b>Timings</b> :  <li ng-repeat="timeRec in recName.timings">
+                                              {{timeRec.dayTime}} 
+                                              </li>
+                    <b>Qualification</b> : {{recName.qualification}} <br>
+                    <b>Average Rating</b> : {{recName.avgRating}} <br>
+                    <b>Ratings</b> : 
+                    <li ng-repeat="i in recName.rating" style="font: bold">
+                      <b>Ratings By User</b>: {{i.ratingByUser}}><br>
+                      <b>Comment By User</b>: {{i.commentByUser}}<br>
+                      <b>Posted On</b>: {{i.dateTimeByUser}}<br>
+                      </li>
+                      <br>
+          
+          </div>
+          <br>  
+     
+	  </div>
+      </div>
+	  
+    </body>
+	</html>
