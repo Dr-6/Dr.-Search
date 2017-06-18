@@ -89,3 +89,82 @@ background-color: #267714;
     text-align: center;
   }
 }
+
+#selection{
+    display: flex;
+    align-content: center;
+    height:auto;
+    width:100%;
+    position:relative;
+    left: 0;
+    top: 40%;
+    margin-right: 10px;
+}
+
+#boxOne{
+    
+    float: left;
+    left: 20%;
+    margin-right: 10px; 
+    width: 33.33%; 
+    text-align: center;
+}
+#boxTwo{
+
+    float: left;
+    width: 33.33%;
+    margin-right: 10px;
+    text-align: center;
+}
+#boxThree{
+
+    float: left;
+    width: 33.33%;
+    margin-right: 15px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Volkhov', sans-serif;
+    color: black;
+    margin-top: 60px;
+    
+ }
+option{
+    font-size: 100%;
+    font-family: 'Volkhov', sans-serif;
+    font-size: 16px;
+
+}
+
+
+/*drop down menu*/
+select{
+ background-color: #39393a;
+    color: orange;
+    padding: 11px 60px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Volkhov', sans-serif;
+    
+     }
+
+
+/*search button*/
+#search{
+    background-color: #267714;
+    text-decoration: none;
+    cursor: pointer;
+    color:  orange;
+    border-style: none;
+    padding: 10px 15px;
+    margin-left: 46.3%;
+    border-radius: 5px;
+    font-family: 'Volkhov', sans-serif;
+    display: block;
+    width: 4%;
+    font-size: 16px;
+    margin-top: 2%;
+}
