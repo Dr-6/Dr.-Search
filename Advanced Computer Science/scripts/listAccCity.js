@@ -99,6 +99,90 @@ var directionsDisplay;
                  }
             }
                                                  
+                                                    $scope.distanceCalculator = function calculateAndDisplayRoute(lati,longi) {
+     
+if(directionsDisplay != null) { 
+   directionsDisplay.setMap(null);
+   directionsDisplay.setOptions( { suppressMarkers: true } );
+
+   directionsDisplay = null; }
+
+   if(markerArray.length > 1){
+     console.log("The length is more than 1 ." + markerArray.length);
+   for(var i=1; i<markerArray.length; i=i+1){
+        markerArray[i].setMap(null);
+    }
+    markerArray.length=1;
+    }
+    //markerArray = [];
+     
+          directionsDisplay = new google.maps.DirectionsRenderer({
+    'map': map,
+    'preserveViewport': true,
+    'draggable': true
+});
+
+          directionsDisplay.setOptions( { suppressMarkers: true } );
+          var directionsService = new google.maps.DirectionsService();
+
+          console.log("Current position = " + currentLat + "     " + currentLon);
+          console.log("Destination position = " + lati + "     " + longi);
+          var selectedMode = document.getElementById('mode').value;
+        
+          prevLati=lati;
+          prevLongi=longi;
+
+          directionsService.route({
+            origin: {lat: parseFloat(currentLat), lng: parseFloat(currentLon)},  
+            destination: {lat: parseFloat(lati), lng: parseFloat(longi)},  
+            optimizeWaypoints: true,
+            provideRouteAlternatives: true,
+            // Note that Javascript allows us to access the constant
+            // using square brackets and a string value as its
+            // "property."
+            travelMode: google.maps.TravelMode[selectedMode]
+          },
+
+          function(response, status) {
+            if (status == 'OK') {
+             directionsDisplay.setDirections(response);
+
+             var distance = response.routes[0].legs[0].distance.text;
+             var time = response.routes[0].legs[0].duration.text;
+
+             $scope.distanceModel = distance;
+             $scope.timeModel = time;
+
+              var contentString = "<div> Distance = " + $scope.distanceModel + "Duration = " + $scope.timeModel + "</div>";
+        var infowindow = new google.maps.InfoWindow({
+          content: "<div> Distance = " + $scope.distanceModel + " Duration = " + $scope.timeModel + "</div>"
+        });
+
+        var markerNew = new google.maps.Marker({
+          position: new google.maps.LatLng(lati, longi),
+          map: map,
+          title: "Distance = " + $scope.distanceModel + " Duration = " + $scope.timeModel
+        
+      });
+        markerArray.push(markerNew);
+        
+        markerNew.addListener('click', function() {
+          infowindow.open(map, markerNew);
+        });
+
+
+             console.log("Distance = " + distance);
+             console.log("Duration = " + time);
+             
+             isShowingSomething=true;
+            } else {
+              //window.alert('Directions request failed due to ' + status);
+            }
+        });
+        
+      }
+
+                                                 
  $scope.setMarker = function(lati,longi){
     
     console.log(lati);
