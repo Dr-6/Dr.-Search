@@ -40,7 +40,178 @@ var marker;
                  }
             }
                                                  
- $scope.setMarker = function(lati,longi){
+var list = $firebaseArray(recRef);
+ list.$loaded()
+   .then(function() {
+    angular.forEach(list,function(element) {
+      if(element.specialization == SelectedCategory){
+    
+    
+    var commentsArray = element.review.split(":");
+    var commentSend;
+    var commentArraySend= [];
+    var timeArraySend = [];
+    var timeToSend;
+    var mainKey;
+    
+    var totalRating=0;
+    for(var i=0; i<commentsArray.length-1;i++){
+      commentSend = {"ratingByUser" : commentsArray[i].split("`")[0],"commentByUser" : commentsArray[i].split("`")[1],"dateTimeByUser" : commentsArray[i].split("`")[2]}
+      console.log(commentsArray[i]);
+      totalRating=totalRating+parseInt(commentsArray[i].split("`")[0]);
+      commentArraySend.push(commentSend);
+}
+
+      var avgRating = parseFloat(totalRating/(commentsArray.length-1));
+
+        var timingsArray = String(element.timing).split("?");
+        for(var i=0; i<timingsArray.length;i++)
+        {
+          timeToSend = {"dayTime" : timingsArray[i]};
+          timeArraySend.push(timeToSend);
+        }
+    
+
+   $rootScope.recordArray.push({"name":element.name,"city":element.city,"image" : element.image,"address" : element.address,
+    "phone_number" : element.phone_number,"timings":timeArraySend,"qualification" : element.qualification,
+    "specialization" : element.specialization, "website":element.website,"email": element.email,"languages":element.languages,
+    "latitude" : element.latitude,"longitude" : element.longitude,"rating" : commentArraySend, "avgRating" : avgRating
+    //, "comment" : commentsArray, "dateTime" : dateTime
+  });
+    sampleArr.push({"name":element.name,"city":element.city,"image" : element.image,"address" : element.address,
+    "phone_number" : element.phone_number,"timings":timeArraySend,"qualification" : element.qualification,
+    "specialization" : element.specialization, "website":element.website,"email": element.email,"languages":element.languages,
+    "latitude" : element.latitude,"longitude" : element.longitude,"rating" : commentArraySend, "avgRating" : avgRating
+    //, "comment" : comment, "dateTime" : dateTime
+});
+
+}
+    });
+   })
+   .catch(function(error) {
+     console.log("Error:", error);
+   });
+
+
+
+var map;
+var marker;
+var currentLat;
+var currentLon;
+var currentLatLon;
+var prevLati;
+var prevLongi;
+var isShowingSomething = false;
+var markerArray = [];
+var directionsDisplay;
+
+  $scope.initMap = function(){
+
+                     if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+                currentLat= position.coords.latitude;
+                currentLon= position.coords.longitude;
+       
+                 var myCenter = new google.maps.LatLng(currentLat,currentLon);//(51.508742,-0.120850);
+                 currentLatLon = new google.maps.LatLng(currentLat, currentLon);
+                 var mapCanvas = document.getElementById("map");
+                 console.log("hi");
+                 var mapOptions = {center: myCenter, zoom: 14,  mapTypeId: google.maps.MapTypeId.ROADMAP};
+                 map = new google.maps.Map(mapCanvas, mapOptions);
+                 marker = new google.maps.Marker({
+                 position: myCenter,
+                 animation: google.maps.Animation.DROP
+                 });                
+                 marker.setMap(map);
+                 markerArray.push(marker);
+                 
+                 }) }
+            }
+
+   $scope.distanceCalculator = function calculateAndDisplayRoute(lati,longi) {
+     
+if(directionsDisplay != null) { 
+   directionsDisplay.setMap(null);
+   directionsDisplay.setOptions( { suppressMarkers: true } );
+
+   directionsDisplay = null; }
+
+   if(markerArray.length > 1){
+     console.log("The length is more than 1 ." + markerArray.length);
+   for(var i=1; i<markerArray.length; i=i+1){
+        markerArray[i].setMap(null);
+    }
+    markerArray.length=1;
+    }
+    //markerArray = [];
+     
+          directionsDisplay = new google.maps.DirectionsRenderer({
+    'map': map,
+    'preserveViewport': true,
+    'draggable': true
+});
+
+          directionsDisplay.setOptions( { suppressMarkers: true } );
+          var directionsService = new google.maps.DirectionsService();
+
+          console.log("Current position = " + currentLat + "     " + currentLon);
+          console.log("Destination position = " + lati + "     " + longi);
+          var selectedMode = document.getElementById('mode').value;
+        
+          prevLati=lati;
+          prevLongi=longi;
+
+          directionsService.route({
+            origin: {lat: parseFloat(currentLat), lng: parseFloat(currentLon)},  
+            destination: {lat: parseFloat(lati), lng: parseFloat(longi)},  
+            optimizeWaypoints: true,
+            provideRouteAlternatives: true,
+            // Note that Javascript allows us to access the constant
+            // using square brackets and a string value as its
+            // "property."
+            travelMode: google.maps.TravelMode[selectedMode]
+          },
+
+          function(response, status) {
+            if (status == 'OK') {
+             directionsDisplay.setDirections(response);
+
+             var distance = response.routes[0].legs[0].distance.text;
+             var time = response.routes[0].legs[0].duration.text;
+
+             $scope.distanceModel = distance;
+             $scope.timeModel = time;
+
+              var contentString = "<div> Distance = " + $scope.distanceModel + "Duration = " + $scope.timeModel + "</div>";
+        var infowindow = new google.maps.InfoWindow({
+          content: "<div> Distance = " + $scope.distanceModel + " Duration = " + $scope.timeModel + "</div>"
+        });
+
+        var markerNew = new google.maps.Marker({
+          position: new google.maps.LatLng(lati, longi),
+          map: map,
+          title: "Distance = " + $scope.distanceModel + " Duration = " + $scope.timeModel
+        
+      });
+        markerArray.push(markerNew);
+        
+        markerNew.addListener('click', function() {
+          infowindow.open(map, markerNew);
+        });
+
+
+             console.log("Distance = " + distance);
+             console.log("Duration = " + time);
+             
+             isShowingSomething=true;
+            } else {
+              //window.alert('Directions request failed due to ' + status);
+            }
+        });
+        
+      }
+
+  $scope.setMarker = function(lati,longi){
     
     console.log(lati);
     
@@ -62,7 +233,7 @@ var marker;
           $scope.distanceCalculator(lati, longi);
         });
 
-  } 
+  }
                                                 
                                                  
  
