@@ -6,11 +6,14 @@
     </head>
     <body>   
 	     <!-- Select box Dr.Category -->
+	    <center>
+                <div style="color:red; position: absolute; top: 9%; left: 41%">*Note: Please select all the fields!!</div>
+            </center>
          	<div id="selection">
             	<div id="boxOne">
-            
-            <h2>Doctor Category</h2>
-            <select  ng-model="selectedCategory">
+            <h2><span style="color:red;">*</span>Doctor Category</h2>
+       
+            <select  ng-model="selectedCategory" required>
 	            
                 <option id="drCat" value="" selected disabled> Select Doctor Category</option>
                 <option value="Surgeon">Surgeon</option>
@@ -25,8 +28,8 @@
 
             <!-- Select box for User.City -->
             <div id="boxTwo">
-            <h2>City</h2>
-            <select ng-model="selectedCity">
+            <h2><span style="color:red;">*</span>City</h2>
+            <select ng-model="selectedCity" required>
 	  
                 <option value="" selected disabled>Select your city</option>
                 <option value="Berlin">Berlin</option>
@@ -42,9 +45,9 @@
             <!-- select box for insurance company -->
 
             <div id="boxThree">
-            <h2>Insurance Company</h2>
+            <h2><span style="color:red;">*</span>Insurance Company</h2>
             
-            <select ng-model="selectedInsurance" >  
+            <select ng-model="selectedInsurance" required>  
 
 	            <option value="" selected disabled>Select insurance company</option>
                 <option value="AOK">AOK</option>
