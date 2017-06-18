@@ -1,0 +1,25 @@
+<br>
+<div id="list" ng-init="initMap()">
+            <div style="overflow-y:auto" ng-repeat="recName in recordArray">
+                <div ng-mouseover="setMarker(recName.latitude,recName.longitude)">
+				<div>
+                    <p style="margin-left:10px; font-size: 22px; display: inline-block; left: 50px;"><b>{{recName.Name}}</b></p>
+                    <img id="medicalImg" src = {{recName.Image}} alt ="Picture of medical store"></img>
+                    <br><br><br>
+                    
+                </div>
+                </div>
+            <div id="medicalDetails">
+
+                <div ng-if="bool" class="fade" >
+                    Contact : {{recName.Contact}}<br>
+                    City : {{recName.city}}<br>
+                    Address : {{recName.Address}}<br>
+					Timings : 
+                    <li ng-repeat="timeRec in recName.Timing">
+                            {{timeRec.dayTime}}</li><br>             
+                </div>
+                <br>
+        </div> 
+            </div> 
+        </div>
