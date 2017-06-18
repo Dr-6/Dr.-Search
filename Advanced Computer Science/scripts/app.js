@@ -12,6 +12,10 @@ app.config(function($routeProvider){
         templateUrl: 'medicalList.html',
         controller: 'listDetCtrl'
     })
+    
+    .otherwise({
+        redirectTo: '/medicalSearchMain.html'
+      });
    
 });
 
