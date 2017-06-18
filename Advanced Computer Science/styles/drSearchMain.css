@@ -236,3 +236,21 @@ h3{
 
             
 }
+
+@media only screen and (max-width: 320px) {
+
+    body { font-size: 0.6em; }
+    h1 {
+        font-size: 5.9vw;
+    }
+    h2 {
+        font-size: 5.0vh;
+    }
+    h2 {
+        font-size: 1.5vh;
+    }
+    p {
+        font-size: 2vmin;
+    }
+
+}
