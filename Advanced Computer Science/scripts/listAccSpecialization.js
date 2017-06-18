@@ -235,6 +235,27 @@ today = mm+'-'+dd+'-'+yyyy;
       alert("Enter a valid comment.");
       return;
     }
+	 else
+    {
+    console.log(" var comment :"+comment);
+    var cityRef = firebase.database().ref("doctors");
+    var recRef =  cityRef.orderByChild("city").equalTo(SelectedCity);
+    recRef.on("child_added",function(snapshot){
+              var previousComment = snapshot.child("review").val();
+              console.log("Previous = " + previousComment);
+               alert( snapshot.child("name").val() + " and " + name );
+              if(snapshot.child("name").val() == name)
+              {
+                 var toUpdate = previousComment + rate +"`"+comment+"`"+today+":";
+                 snapshot.ref.update({review : toUpdate});
+                 alert("Your comment has been sent ! ");              
+              }
+          })
+ 
+    $scope.formData.alltext="";
+    $scope.formData.rate="";
+    }
+	
 	console.log(" var comment :"+comment);
 	
 	
