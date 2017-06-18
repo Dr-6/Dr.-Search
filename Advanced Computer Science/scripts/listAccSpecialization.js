@@ -209,7 +209,7 @@ if(directionsDisplay != null) {
  
  $scope.formData={}; 
  
-$scope.onComment=function(name,inputCity)
+$scope.onComment=function(name,inputCategory)
 {
     var rate= $scope.formData.rate;
     console.log("Ratings = " + rate);
