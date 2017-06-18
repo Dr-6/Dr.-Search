@@ -48,6 +48,21 @@
                       <b>Posted On</b>: {{i.dateTimeByUser}}<br>
                       </li>
                       <br>
+		  
+		  <b>Rate Doctor</b>:     
+                    <select id="rating" ng-model="formData.rate">
+                    <option value=""disabled selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select><br><br>
+
+                    <b>Comment</b>:
+                    <textarea ng-model="formData.alltext" style="width:70%; height: 40%;" ></textarea><br><br>
+                    <button class="submit" type="button" class="btn btn-success" ng-click="onComment()">Submit</button><br><br><br>
+
           
           </div>
           <br>  
