@@ -174,3 +174,184 @@ img:hover{
   text-decoration: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+.footer{
+  background-color:#2f2f33;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+.footer #left{
+  text-align: center;
+  height: 300px;
+float: left;
+width: 33%;
+background-color:#2f2f33;
+}
+
+.footer #left #left_header{
+  margin-left: 20px;
+  margin-top: 20px;
+ color:orange;
+ font-size: 20px;
+}
+
+.footer #left #drCatList li{
+  list-style-type: none;
+}
+
+.footer #left #drCatList li a{
+  margin-top: 10px;
+  font-size: 18px;
+  color: orange;
+
+  -webkit-transform: all 1s ease;/*safari and chrome*/
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+}
+.footer #left #drCatList li a:hover{
+background-color: #ddd;
+border-radius: 20%;
+  color: black;
+  text-decoration: none;
+  -webkit-transform:scale(1.25);/*safari and chrome*/
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+    }
+.footer #middle{
+    text-align: center;
+float: left;
+width: 33%;
+height: 300px;
+background-color:#2f2f33;
+}
+
+
+.footer #middle #mid_header1{
+ font-size: 20px;
+ color:orange;
+ text-decoration: none;
+ display: block;
+ margin-top: 20px;
+}
+
+.footer #middle #mid_header1:hover{color: skyblue;}
+
+.footer #middle #mid_header2{
+ font-size: 20px;
+ color: orange;
+ text-decoration: none;
+ margin-top: 20px;
+ display: block;
+}
+
+.footer #middle #mid_header2:hover{color: skyblue;}
+
+.footer #middle #mid_header3{
+ font-size: 20px;
+ color: orange;
+ display: block;
+ margin-top: 20px;
+}
+
+#socialLogo{
+  top: 25%;
+  left: 25%;
+  display: flex;
+    width: 35%;
+    height: 14%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fa {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    margin-left: 10px;
+
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+        text-decoration: none;
+    }
+
+    /*Facebok*/
+    .fa-facebook {
+        float: left;
+        background: #3B5998;
+        color: white;
+    }
+
+    /*Twitter*/
+    .fa-twitter {
+      text-align: center;
+        padding: 10px;
+        background: #55ACEE;
+        color: white;
+        float: left
+    }
+
+    /*Instagram*/
+    .fa-instagram {
+    background: #125688;
+    color: white;
+    float: right;
+    }
+
+
+.footer #right{
+  text-align: center;
+float: right;
+width: 34%;
+height: 300px;
+  background-color:#2f2f33;
+}
+
+.footer #right #right_header{
+  margin-top: 20px;
+  font-size: 20px;
+ color: orange;
+margin-left: 30px;
+}
+
+.footer #right #cityList li{
+  list-style-type: none;
+}
+
+.footer #right #cityList li a{
+font-size: 18px;
+ color: orange;
+
+  -webkit-transform: all 1s ease;/*safari and chrome*/
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transition: all 1s ease;
+}
+.footer #right #cityList li a:hover{
+background-color: #ddd;
+border-radius: 20%;
+  color: black;
+  text-decoration: none;
+  -webkit-transform:scale(1.25);/*safari and chrome*/
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+
+}
+
