@@ -8,13 +8,13 @@
 <body ng-app="minmax">
 
 <div ng-controller="homeCtrl">
-        <h1> Select your City </h1>
+        <h1><span style="color:red;">*</span> Select your City </h1>
         
        
             <div class="form-group">
                 <select name="city"
                 class="form-control"
-                ng-model="formModel.city">
+                ng-model="formModel.city" required>
                 <option value="" selected disabled>Please Choose</option>
                 <option value="Berlin">Berlin</option>
                 <option value="Heidelberg">Heidelberg</option>
