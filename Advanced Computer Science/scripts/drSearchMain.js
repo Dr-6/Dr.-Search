@@ -19,6 +19,10 @@ app.config(function($routeProvider) {
         controller : "drlistCtrl"
     })
     
+    .otherwise({
+        redirectTo: '/drSearchMain'
+      });
+    
 });
 
 app.controller("mainCtrl", function($location){
