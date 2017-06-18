@@ -147,3 +147,89 @@ select{
 
 
 }
+/*horizontal line*/
+hr{
+    margin-top: 18%;
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/*social media icons*/
+
+.fa-facebook {
+    padding: 12px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #2b4170;
+    color: white;
+    margin-right: 3px;
+    margin-left: 44.5%;
+}
+
+.fa-instagram {
+    padding: 12px;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    margin-right: 3px;
+    color: white;
+}
+.fa-twitter {
+    padding: 12px;
+    font-size: 18px;
+    width: 20px;
+    text-align: inherit;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #55ACEE;
+    color: white;
+}
+
+/*social media icons hover*/
+.fa-facebook:hover {
+    opacity: 0.7;
+}
+.fa-instagram:hover {
+    opacity: 0.7;
+}
+.fa-twitter:hover {
+    opacity: 0.7;
+}
+
+
+/*footer*/
+h3{
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Volkhov', sans-serif;
+  color: orange;
+  margin-top: 10px;
+
+            
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    body { font-size: 0.6em; }
+    h1 {
+        font-size: 5.9vw;
+    }
+    h2 {
+        font-size: 5.0vh;
+    }
+    h2 {
+        font-size: 1.5vh;
+    }
+    p {
+        font-size: 2vmin;
+    }
+
+}
