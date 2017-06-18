@@ -102,3 +102,48 @@ background-color: #267714;
     text-align: center;
   }
 }
+
+/*Heading (select your city)*/
+h1{
+    text-align: center;
+    font-family: 'Volkhov', sans-serif;
+    color: black;
+    margin-top: 60px;
+ }
+option{
+    font-size: 17px;
+    font-family: 'Volkhov', sans-serif;
+}
+
+
+div.form-group{
+    text-align: center;
+    font-family: 'Volkhov', sans-serif;
+ }
+
+/*drop down menu*/
+select{
+ background-color: #39393a;
+    color: orange;
+    padding: 11px 60px;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Volkhov', sans-serif;
+
+     }
+
+/*search button*/
+.btn-primary{
+    background-color: #267714;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color:  orange;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Volkhov', sans-serif;
+
+
+}
