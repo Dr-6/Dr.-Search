@@ -1,6 +1,18 @@
 app.controller("drlistCtrl",function ($scope,$routeParams,$firebaseObject,$rootScope,$firebaseArray,$filter) {
    
-   /* angularJS code will be updated here.*/
+   var SelectedCategory=$routeParams.selectedCategory;
+    var SelectedCity=$routeParams.selectedCity;
+    var SelectedInsurance=$routeParams.selectedInsurance;
+
+
+var sampleArr =[];
+        $rootScope.recordArray = [];
+
+        var cityRef = firebase.database().ref("doctors");
+        console.log(cityRef+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--");
+     
+       var recRef =  cityRef.orderByChild("city").equalTo(SelectedCity);
+
 
 /*map implementation*/	
 var map;
